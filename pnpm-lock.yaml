@@ -14,8 +14,18 @@ importers:
       dotenv:
         specifier: ^16.4.5
         version: 16.4.5
+    devDependencies:
+      '@types/node':
+        specifier: ^22.5.5
+        version: 22.5.5
+      typescript:
+        specifier: ^5.6.2
+        version: 5.6.2
 
 packages:
+
+  '@types/node@22.5.5':
+    resolution: {integrity: sha512-Xjs4y5UPO/CLdzpgR6GirZJx36yScjh73+2NlLlkFRSoQN8B0DpfXPdZGnvVmLRLOsqDpOfTNv7D9trgGhmOIA==}
 
   asynckit@0.4.0:
     resolution: {integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==}
@@ -59,7 +69,19 @@ packages:
   proxy-from-env@1.1.0:
     resolution: {integrity: sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==}
 
+  typescript@5.6.2:
+    resolution: {integrity: sha512-NW8ByodCSNCwZeghjN3o+JX5OFH0Ojg6sadjEKY4huZ52TqbJTJnDo5+Tw98lSy63NZvi4n+ez5m2u5d4PkZyw==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
+  undici-types@6.19.8:
+    resolution: {integrity: sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw==}
+
 snapshots:
+
+  '@types/node@22.5.5':
+    dependencies:
+      undici-types: 6.19.8
 
   asynckit@0.4.0: {}
 
@@ -94,3 +116,7 @@ snapshots:
       mime-db: 1.52.0
 
   proxy-from-env@1.1.0: {}
+
+  typescript@5.6.2: {}
+
+  undici-types@6.19.8: {}

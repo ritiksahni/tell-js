@@ -5,17 +5,24 @@
 
 import Sender from './sender.js'; // Ensure the correct path to Sender.js
 
+interface Options {
+    botToken: string;
+    chatId: string;
+}
+
+
 /**
  * Tell class for logging messages to Telegram.
  */
 class Tell {
+    private logger: Sender;
     /**
      * Initialize the Tell class with the options object.
      * @param {Object} options - The options object.
      * @param {string} [options.botToken] - The bot token (optional if TELEGRAM_BOT_TOKEN environment variable is set).
      * @param {string} options.chatId - The chat ID (required).
      */
-    constructor(options) {
+    constructor(options: Options) {
         this.logger = new Sender(options);
     }
 
@@ -23,7 +30,7 @@ class Tell {
      * Log an info message.
      * @param {string} msg - The message to log.
      */
-    info(msg) {
+    info(msg: string) {
         this.logger.info(msg).catch(console.error);
     }
 
@@ -31,7 +38,7 @@ class Tell {
      * Log an error message.
      * @param {string} msg - The message to log.
      */
-    error(msg) {
+    error(msg: string) {
         this.logger.error(msg).catch(console.error);
     }
 
@@ -39,7 +46,7 @@ class Tell {
      * Log a warning message.
      * @param {string} msg - The message to log.
      */
-    warn(msg) {
+    warn(msg: string) {
         this.logger.warn(msg).catch(console.error);
     }
 
@@ -47,7 +54,7 @@ class Tell {
      * Log a regular message.
      * @param {string} msg - The message to log.
      */
-    log(msg) {
+    log(msg: string) {
         this.logger.log(msg).catch(console.error);
     }
 }
