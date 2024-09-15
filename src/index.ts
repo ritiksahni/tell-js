@@ -16,11 +16,12 @@ interface Options {
  */
 class Tell {
     private logger: Sender;
+    
     /**
-     * Initialize the Tell class with the options object.
-     * @param {Object} options - The options object.
-     * @param {string} [options.botToken] - The bot token (optional if TELEGRAM_BOT_TOKEN environment variable is set).
-     * @param {string} options.chatId - The chat ID (required).
+     * Initialize the Tell class with the options object
+     * @param {Options} options - The options object with Telegram Bot Token and Chat ID.
+     * @param {string} options.botToken - The Telegram Bot Token.
+     * @param {string} options.chatId - The Chat ID to send messages to.
      */
     constructor(options: Options) {
         this.logger = new Sender(options);
@@ -30,7 +31,7 @@ class Tell {
      * Log an info message.
      * @param {string} msg - The message to log.
      */
-    info(msg: string) {
+    info(msg: string): void {
         this.logger.info(msg).catch(console.error);
     }
 
@@ -38,7 +39,7 @@ class Tell {
      * Log an error message.
      * @param {string} msg - The message to log.
      */
-    error(msg: string) {
+    error(msg: string): void {
         this.logger.error(msg).catch(console.error);
     }
 
@@ -46,7 +47,7 @@ class Tell {
      * Log a warning message.
      * @param {string} msg - The message to log.
      */
-    warn(msg: string) {
+    warn(msg: string): void {
         this.logger.warn(msg).catch(console.error);
     }
 
@@ -54,7 +55,7 @@ class Tell {
      * Log a regular message.
      * @param {string} msg - The message to log.
      */
-    log(msg: string) {
+    log(msg: string): void {
         this.logger.log(msg).catch(console.error);
     }
 }

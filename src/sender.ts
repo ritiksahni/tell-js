@@ -13,11 +13,13 @@ class Sender {
 
     /**
      * Initialize the Sender class with the options object
-     * @param {Object} options - The options object.
+     * @param {Object} options - The options object with Telegram Bot Token and Chat ID.
+     * @param {string} options.botToken - The Telegram Bot Token.
+     * @param {string} options.chatId - The Chat ID to send messages to.
      */
     constructor(options: Options) {        
-        this.chatId = process.env.TELEGRAM_CHAT_ID || options.chatId;
-        this.botToken = process.env.TELEGRAM_BOT_TOKEN || options.botToken;
+        this.chatId = options.chatId;
+        this.botToken = options.botToken;
         this.baseURL = `https://api.telegram.org/bot${this.botToken}`;
     }
 
