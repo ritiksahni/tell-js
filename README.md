@@ -16,7 +16,7 @@ A lightweight and easy-to-use Node.js logging library that sends alerts via Tele
 ## Installation
 
 ```bash
-npm install tell.js
+npm install tell-js
 ```
 
 ## Usage
