@@ -22,7 +22,7 @@ npm install tell-js
 ## Usage
 
 ```javascript
-import Tell from 'tell.js';
+import Tell from 'tell-js';
 
 const logger = new Tell({
     chatId: "YOUR_CHAT_ID",
@@ -37,7 +37,7 @@ logger.log("A regular log message.");
 
 ## Configuration
 
-To use `tell.js`, you need to provide two pieces of information:
+To use `tell-js`, you need to provide two pieces of information:
 
 1. Telegram Bot Token
 2. Chat ID
@@ -63,7 +63,7 @@ To use `tell.js`, you need to provide two pieces of information:
 
 ```js
 import winston from 'winston';
-import Tell from 'tell.js';
+import Tell from 'tell-js';
 import { Writable } from 'stream';
 
 const tell = new Tell({
@@ -93,7 +93,7 @@ const logger = winston.createLogger({
    A: Yes, Telegram has a limit of 4096 characters per message. If your log message exceeds this, it will be split into multiple messages.
 
 2. **Q: Can I use this in a browser environment?**
-   A: No, `tell.js` is designed for Node.js environments only, as it requires access to server-side resources.
+   A: No, `tell-js` is designed for Node.js environments only, as it requires access to server-side resources.
 
 3. **Q: How secure is it to send logs via Telegram?**
    A: While Telegram provides encryption, we recommend not logging sensitive information like passwords or API keys.
@@ -132,11 +132,11 @@ This project is licensed under the GNU General Public License v3.0
 
 ## Support
 
-If you encounter any problems or have any questions, please open an issue on the [GitHub repository](https://github.com/yourusername/tell.js/issues) or send an email to the maintainer.
+If you encounter any problems or have any questions, please open an issue on the [GitHub repository](https://github.com/ritiksahni/tell-js/issues) or send an email to the maintainer.
 
 ## Changelog
 
-See [CHANGELOG.md](CHANGELOG.md) for a detailed history of changes to `tell.js`.
+See [CHANGELOG.md](CHANGELOG.md) for a detailed history of changes to `tell-js`.
 
 ## Acknowledgements
 
